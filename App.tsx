@@ -145,23 +145,23 @@ const App: React.FC = () => {
 
   return (
     <HashRouter>
-      <ParticleBackground />
-      <CustomCursor />
-      <div className="relative z-10 min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 animation-fadeInUp pt-24">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </HashRouter>
+  <ParticleBackground />
+  <CustomCursor />
+  <div className="relative z-10 min-h-screen flex flex-col">
+    <Header />
+    <main className="flex-grow max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 md:py-16 animation-fadeInUp pt-24">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </main>
+    <Footer />
+  </div>
+</HashRouter>
   );
 };
 

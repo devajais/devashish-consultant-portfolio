@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;@layer base{:root{--cursor-color: #00F5FF}body{cursor:none}}@layer utilities;

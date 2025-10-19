@@ -1,0 +1,17 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* your custom colors, fonts, etc */
+@layer base {
+  :root {
+    --cursor-color: #00F5FF;
+  }
+  body {
+    cursor: none;
+  }
+}
+@layer utilities {
+  /* custom Tailwind utilities if needed */
+}

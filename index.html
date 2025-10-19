@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devashish Jaiswal | Fractional CTO</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#00F5FF', // Electric Cyan
+              'brand-secondary': '#00B8D9', // Deeper Cyan
+              'base-bg': '#0D0D0D', // Near Black
+              'base-card': '#1A1A1A', // Very Dark Gray
+              'base-border': '#292929', // Dark Gray
+              'text-primary': '#E0E0E0', // Light Gray (Off-white)
+              'text-secondary': '#A0A0A0', // Medium Gray
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            keyframes: {
+              glow: {
+                '0%, 100%': { textShadow: '0 0 10px theme(colors.brand-primary/50%)' },
+                '50%': { textShadow: '0 0 25px theme(colors.brand-primary/80%)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+               fadeInDown: {
+                '0%': { opacity: '0', transform: 'translateY(-100%)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              'subtle-pulse': {
+                '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 0 0 theme(colors.brand-primary/30%)' },
+                '50%': { transform: 'scale(1.02)', boxShadow: '0 0 0 10px theme(colors.brand-primary/0%)' },
+              },
+              borderGlow: {
+                '0%, 100%': { 'border-image-source': 'linear-gradient(90deg, theme(colors.brand-primary), theme(colors.brand-secondary))' },
+                '50%': { 'border-image-source': 'linear-gradient(90deg, theme(colors.brand-secondary), theme(colors.brand-primary))' },
+              },
+               'modal-in': {
+                '0%': { opacity: '0', transform: 'scale(0.95)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              'modal-out': {
+                '0%': { opacity: '1', transform: 'scale(1)' },
+                '100%': { opacity: '0', transform: 'scale(0.95)' },
+              }
+            },
+            animation: {
+              glow: 'glow 4s ease-in-out infinite',
+              fadeInUp: 'fadeInUp 0.8s ease-out forwards',
+              fadeInDown: 'fadeInDown 0.5s ease-out forwards',
+              'subtle-pulse': 'subtle-pulse 2.5s ease-in-out infinite',
+              borderGlow: 'borderGlow 3s linear infinite',
+              'modal-in': 'modal-in 0.2s ease-out forwards',
+              'modal-out': 'modal-out 0.2s ease-out forwards',
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        cursor: none;
+      }
+      .custom-cursor .cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        background-color: #00F5FF;
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        transition: transform 0.1s ease-out;
+      }
+      .custom-cursor .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        width: 30px;
+        height: 30px;
+        border: 2px solid #00F5FF;
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+        transition: all 0.2s ease-out;
+      }
+      .custom-cursor .cursor-outline.hovered {
+        transform: translate(-50%, -50%) scale(1.5);
+        background-color: rgba(0, 245, 255, 0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.4",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-base-bg text-text-primary font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

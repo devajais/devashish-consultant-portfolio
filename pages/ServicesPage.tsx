@@ -36,7 +36,7 @@ const ServicesPage: React.FC = () => {
   const [featuredService, ...otherServices] = servicesData;
 
   return (
-    <div className="space-y-20 pt-20">
+    <section id="services" className="space-y-20 pt-20">
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-4 text-text-primary">Your Journey to Launch</h1>
         <p className="max-w-3xl mx-auto text-lg text-text-secondary">
@@ -46,7 +46,7 @@ const ServicesPage: React.FC = () => {
 
       {/* Featured Service */}
       <section>
-        <div className={`opacity-0 animate-fadeInUp ${cardHoverEffect}`}>
+        <div className={`animate-fadeInUp ${cardHoverEffect}`}>
             <div className={`${cardInnerClass} md:flex-row md:items-center md:gap-8`}>
               <div className="flex-shrink-0 mb-6 md:mb-0">{featuredService.icon}</div>
               <div className="flex-grow">
@@ -69,7 +69,7 @@ const ServicesPage: React.FC = () => {
       {/* Other Services */}
       <section className="grid md:grid-cols-3 gap-8">
         {otherServices.map((service, index) => (
-          <div key={service.title} style={{ animationDelay: `${index * 100}ms` }} className={`opacity-0 animate-fadeInUp ${cardHoverEffect}`}>
+          <div key={service.title} style={{ animationDelay: `${index * 100}ms` }} className={`animate-fadeInUp ${cardHoverEffect}`}>
             <div className={cardInnerClass}>
               <div className="flex-shrink-0 mb-6">{service.icon}</div>
               <h3 className="text-xl font-bold text-text-primary mb-3">{service.title}</h3>
@@ -87,7 +87,7 @@ const ServicesPage: React.FC = () => {
           </div>
         ))}
       </section>
-    </div>
+    </section>
   );
 };
 

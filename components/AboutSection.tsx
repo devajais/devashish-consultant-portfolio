@@ -32,18 +32,18 @@ const ImageModal: React.FC<{ src: string; onClose: () => void }> = ({ src, onClo
   );
 };
 
-const AboutPage: React.FC = () => {
+const AboutSection: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section id="about" className="space-y-20 pt-20">
+    <section id="about" className="space-y-20 py-20">
        {isModalOpen && <ImageModal src="dp-removebg-preview (1).png" onClose={() => setIsModalOpen(false)} />}
-      <section className="text-center">
+      <div className="text-center">
         <h1 className="text-4xl font-bold mb-4 text-text-primary">About Me</h1>
         <p className="text-2xl italic text-brand-primary animate-glow">"Decide, Commit, Succeed."</p>
-      </section>
+      </div>
 
-      <section className="grid md:grid-cols-5 gap-12 items-center">
+      <div className="grid md:grid-cols-5 gap-12 items-center">
         <div className="md:col-span-2 flex justify-center items-center">
             <div className="relative group" data-cursor-hover onClick={() => setIsModalOpen(true)}>
               <div className="absolute -inset-1 bg-gradient-to-r from-brand-primary to-brand-secondary rounded-full blur-xl opacity-50 group-hover:opacity-80 transition duration-1000 animate-tilt"></div>
@@ -59,9 +59,9 @@ const AboutPage: React.FC = () => {
              My journey is turning ambitious ideas into reality. From architecting AI systems to leading successful exits, I'm your guide and technical partner.
             </p>
         </div>
-      </section>
+      </div>
       
-      <section>
+      <div>
           <h2 className="text-3xl font-bold text-center mb-12 text-text-primary">My Philosophy</h2>
           <div className="grid md:grid-cols-3 gap-8">
               <div className={cardHoverEffect}>
@@ -86,9 +86,9 @@ const AboutPage: React.FC = () => {
                    <div className={animatedBorder}></div>
               </div>
           </div>
-      </section>
+      </div>
 
-      <section>
+      <div>
         <h2 className="text-3xl font-bold text-center mb-12 text-text-primary">Skills & Expertise</h2>
         <div className="space-y-8">
           {skillsData.map((skillCategory) => (
@@ -107,9 +107,9 @@ const AboutPage: React.FC = () => {
             </div>
           ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 };
 
-export default AboutPage;
+export default AboutSection;

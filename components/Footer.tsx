@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
           &copy; {new Date().getFullYear()} Devashish Jaiswal. All rights reserved.
         </p>
         <div className="flex items-center space-x-4">
-          <a href="https://www.linkedin.com/in/devashish-jaiswal-714075135/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-primary transition-colors">
+          <a href="https://www.linkedin.com/in/devajais/" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-brand-primary transition-colors">
             <LinkedInIcon />
           </a>
           <p className="text-text-secondary text-sm">Let's connect.</p>

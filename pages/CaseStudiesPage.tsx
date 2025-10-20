@@ -35,7 +35,7 @@ const animatedBorder = "absolute inset-0 rounded-lg border-2 border-transparent 
 
 
 const CaseStudyCard: React.FC<{ study: CaseStudy, index: number }> = ({ study, index }) => (
-    <div style={{ animationDelay: `${index * 100}ms` }} className={`opacity-0 animate-fadeInUp ${cardHoverEffect}`}>
+    <div style={{ animationDelay: `${index * 100}ms` }} className={`animate-fadeInUp ${cardHoverEffect}`}>
         <div className={cardInnerClass}>
             <div className="flex flex-col sm:flex-row justify-between sm:items-center">
                 <h2 className="text-3xl font-bold text-brand-primary">{study.title}</h2>
@@ -73,7 +73,7 @@ const CaseStudyCard: React.FC<{ study: CaseStudy, index: number }> = ({ study, i
 
 const CaseStudiesPage: React.FC = () => {
   return (
-    <div className="space-y-16 pt-20">
+    <section id="case-studies" className="space-y-16 pt-20">
         <section className="text-center">
             <h1 className="text-4xl font-bold mb-4 text-text-primary">Case Studies</h1>
             <p className="max-w-3xl mx-auto text-lg text-text-secondary">
@@ -86,7 +86,7 @@ const CaseStudiesPage: React.FC = () => {
                 <CaseStudyCard key={index} study={study} index={index} />
             ))}
         </div>
-    </div>
+    </section>
   );
 };
 

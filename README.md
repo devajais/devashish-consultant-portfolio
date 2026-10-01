@@ -1,20 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# devashishjaiswal.com
 
-# Run and deploy your AI Studio app
+Personal site & identity for **Devashish Jaiswal** — Fractional CTO & AI Architect.
 
-This contains everything you need to run your app locally.
+Dark, futuristic, hand-crafted. Built to be fast, accessible, and genuinely crawlable.
 
-View your app in AI Studio: https://ai.studio/apps/drive/100VxG3TlJrq9yE1IpAMDgZ-UMsMccFkp
+## Stack
 
-## Run Locally
+- **Vite + React 19 + TypeScript**
+- **Tailwind CSS v4** (`@tailwindcss/vite`)
+- **vite-react-ssg** — every route is statically pre-rendered to real, crawlable HTML
+- **Three.js + @react-three/fiber + drei** — the interactive hero scene (lazy, client-only)
+- **Motion** (`motion/react`) — scroll reveals, magnetic buttons, tilt cards, count-ups
+- Fonts: Clash Display + Satoshi (Fontshare) + JetBrains Mono
 
-**Prerequisites:**  Node.js
+## Develop
 
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run typecheck
+npm run build      # generates sitemap + static SSG build into dist/
+npm run preview    # serve the built site
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Content
+
+- Site identity, links & nav: `src/site.ts`
+- Services / case studies / skills / testimonials: `src/data/site-data.ts`
+- Blog articles (structured content): `src/content/blog-articles.ts`
+
+Add a blog post by appending to `blogArticles` — its route, sitemap entry, and SEO
+tags are generated automatically.
+
+## SEO
+
+- Per-page `<title>`, meta description, canonical, OpenGraph & Twitter tags (`src/components/Seo.tsx`)
+- JSON-LD: `Person`, `BlogPosting`, `Blog`, `Service`
+- `sitemap.xml` (auto-generated), `robots.txt`, branded `og.png`, `404.html`
+
+## Deploy
+
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and publishes to
+GitHub Pages. The site serves from the custom domain via `public/CNAME`.
+
+**DNS (one-time):** point `devashishjaiswal.com` at GitHub Pages —
+`A` records to `185.199.108–111.153`, and a `CNAME` for `www` → `devajais.github.io`.
+Then enable HTTPS in the repo's Pages settings.

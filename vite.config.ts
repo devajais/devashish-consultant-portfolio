@@ -1,29 +1,35 @@
 import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig, type UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, '.', '');
+// devashishjaiswal.com — deployed at the domain root.
+export default defineConfig({
+  base: '/',
 
-  return {
-    base: '/devashish-consultant-portfolio/', // 👈 VERY IMPORTANT for GitHub Pages
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+  },
 
-    server: {
-      port: 3000,
-      host: '0.0.0.0',
+  plugins: [react(), tailwindcss()],
+
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
     },
+  },
 
-    plugins: [react()],
+  ssr: {
+    // three / R3F must render (or be stubbed) during the SSG pass, not externalized.
+    noExternal: ['three', '@react-three/fiber', '@react-three/drei', 'motion'],
+  },
 
-    define: {
-      'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+  // Consumed by vite-react-ssg during the build.
+  ssgOptions: {
+    // Emit a 404.html (rendered by the catch-all route) for GitHub Pages fallbacks.
+    includedRoutes(paths) {
+      return [...paths, '/404'];
     },
-
-    resolve: {
-      alias: {
-        '@': path.resolve(__dirname, '.'),
-      },
-    },
-  };
-});
+  },
+} as UserConfig & { ssgOptions: Record<string, unknown> });

@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/devashish-consultant-portfolio/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devashish Jaiswal | Fractional CTO</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#08090B" />
 
-    <!-- Tailwind CDN for quick demo -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'brand-primary': '#00F5FF',
-              'brand-secondary': '#00B8D9',
-              'base-bg': '#0D0D0D',
-              'base-card': '#1A1A1A',
-              'base-border': '#292929',
-              'text-primary': '#E0E0E0',
-              'text-secondary': '#A0A0A0',
-            },
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-            },
-          },
-        },
-      }
-    </script>
+    <!-- Fonts: Clash Display (display) + Satoshi (body) via Fontshare, JetBrains Mono (labels) -->
+    <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600,700&f[]=satoshi@400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- title + meta description are injected per-route by the Seo component (react-helmet) -->
   </head>
-  <body class="bg-base-bg text-text-primary font-sans">
+  <body>
     <div id="root"></div>
-    <!-- Vite's entry point -->
-    <script type="module" src="/index.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

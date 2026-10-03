@@ -82,7 +82,7 @@ export default function ScrollJourney({ eyebrow, title, stages, ctaLabel, ctaTo 
     <section>
       {/* Desktop: pinned horizontal travel (skipped when motion is reduced) */}
       {!reduce && (
-        <div ref={ref} className="relative hidden h-[320vh] md:block">
+        <div ref={ref} className="relative hidden h-[240vh] md:block">
           <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden">
             <Container>{Header}</Container>
 

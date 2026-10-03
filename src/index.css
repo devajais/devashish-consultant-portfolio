@@ -135,9 +135,10 @@
   animation: marquee-x var(--marquee-duration, 30s) linear infinite;
 }
 
+/* Translate-only so the blurred surface never re-rasterizes (compositor-cheap). */
 @keyframes aurora-drift {
-  0%, 100% { transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1.1); }
-  50% { transform: translate3d(4%, 3%, 0) rotate(8deg) scale(1.25); }
+  0%, 100% { transform: translate3d(-3%, -2%, 0); }
+  50% { transform: translate3d(3%, 2%, 0); }
 }
 
 @keyframes spin-slow {

@@ -11,7 +11,9 @@
   "scripts": {
     "dev": "vite",
     "sitemap": "node scripts/gen-sitemap.mjs",
-    "build": "npm run sitemap && vite-react-ssg build",
+    "llms": "node scripts/gen-llms.mjs",
+    "generate": "npm run sitemap && npm run llms",
+    "build": "npm run generate && vite-react-ssg build",
     "preview": "vite preview --outDir dist",
     "typecheck": "tsc --noEmit"
   },

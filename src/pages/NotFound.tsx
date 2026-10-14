@@ -6,7 +6,7 @@ import MagneticButton from '@/components/reactbits/MagneticButton';
 export default function NotFound() {
   return (
     <>
-      <Seo title="Page not found" path="/404" />
+      <Seo title="Page not found" path="/404" noIndex />
       <section className="relative flex min-h-[80svh] items-center overflow-hidden">
         <div aria-hidden className="pointer-events-none absolute inset-0 opacity-50">
           <Aurora />

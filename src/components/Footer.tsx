@@ -62,6 +62,9 @@ export default function Footer() {
             <a href={site.links.work} target="_blank" rel="noopener noreferrer" className="text-muted hover:text-white">
               Selected Work ↗
             </a>
+            <a href="/llms.txt" className="text-muted hover:text-white" title="Plain-text summary of this site for AI assistants">
+              llms.txt
+            </a>
           </div>
         </div>
 

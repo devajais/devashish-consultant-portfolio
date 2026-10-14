@@ -1,0 +1,98 @@
+# Devashish Jaiswal
+
+> Devashish Jaiswal is a Fractional CTO and AI architect who helps founders and business owners, technical or not, decide what to build, adopt AI that actually pays off, check whether their tech team is on track, and find out if an MVP is worth building.
+
+Devashish Jaiswal is a Fractional CTO and AI architect. He has co-founded startups, led engineering teams, built real-time voice AI, turned running businesses into live AI dashboards, and taken a product all the way to a successful acquisition. Today he helps founders and business owners, most of them non-technical, make smart calls about technology and AI: what to build, whether to build it, whether their team is on track, and where AI genuinely moves the needle.
+
+This file follows the llms.txt convention (https://llmstxt.org). The complete, uncondensed content of every page on the site is in [llms-full.txt](https://devashishjaiswal.com/llms-full.txt). All content is public, written by Devashish Jaiswal, and may be quoted or summarised with attribution.
+
+## Identity
+
+- **Name:** Devashish Jaiswal
+- **Role:** Fractional CTO & AI Architect
+- **Based in:** India · Working globally
+- **Website:** https://devashishjaiswal.com
+- **Email:** contact@devashishjaiswal.com
+- **LinkedIn:** https://www.linkedin.com/in/devajais/
+- **Book a 1:1 call:** https://topmate.io/devashish_jaiswal
+- **Portfolio / selected work:** https://work.devashishjaiswal.com
+- **Motto:** Decide, Commit, Succeed.
+
+## Track record
+
+- 30+ Businesses & startups advised
+- 12 Engineers led as CTO
+- 1 Startup acquired
+- 3+ Ventures co-founded
+
+01. **Co-founded — Built from zero.** Started companies as a founder, not a bystander. I know what it feels like to bet everything on a product.
+02. **Built AI — Real-time voice AI.** Architected a real-time voice AI platform reliable enough for live customer conversations in production.
+03. **Led as CTO — Led the team.** Ran a twelve-person engineering team through a complex, ground-up legal-tech build.
+04. **Exited — Clean acquisition.** Took a startup all the way to a successful acquisition. Full cycle, start to finish.
+
+## Services
+
+- [AI Strategy for Your Business](https://devashishjaiswal.com/services#ai-strategy): Practical AI adoption for teams and offline businesses, minus the hype. We find where AI actually saves time or makes money for you.
+- [AI Business Dashboards](https://devashishjaiswal.com/services#ai-dashboards): Turn the systems you already run on, sales, operations, support, into one live AI dashboard that tells you what is actually happening in your business, in plain English.
+- [Is It Worth Building?](https://devashishjaiswal.com/services#mvp-validation): An honest, expert read on your idea or MVP before you spend real money, including scope, cost, timeline, and the risks nobody warned you about.
+- [Tech Team Health Check](https://devashishjaiswal.com/services#team-healthcheck): Not sure if your developers or agency are on track? I review the team, the code, and the roadmap, then tell you straight.
+- [Fractional CTO](https://devashishjaiswal.com/services#fractional-cto): Ongoing technical leadership to build, hire, and scale, without a full-time CTO salary.
+
+## Case studies
+
+- [Glimpass](https://devashishjaiswal.com/case-studies#glimpass): From launch to a successful acquisition. Successfully acquired, validating both the technical foundation and market fit. A full-cycle startup success.
+- [markAIble](https://devashishjaiswal.com/case-studies#markaible): Engineering real-time voice AI for production. A resilient platform that stayed fast and dependable under real production load, at 99.9% uptime.
+- [Neurolaw AI](https://devashishjaiswal.com/case-studies#neurolaw-ai): Building a vision from the ground up. Launched a powerful product, demonstrating leadership from ideation through team management and delivery.
+
+## Skills
+
+- **Leadership:** Fractional CTO, Team Building & Mentorship, Technical Strategy, Product Roadmapping
+- **AI & Engineering:** Large Language Models, AI Integration, Cloud Architecture (GCP), Docker & Kubernetes, React.js, Node.js, Java
+
+## Frequently asked questions
+
+**Q: Who is Devashish Jaiswal?**
+
+A: Devashish Jaiswal is a Fractional CTO and AI architect. He has co-founded startups, led engineering teams, built voice AI at scale, and taken a product all the way to acquisition. Today he helps founders and business owners make confident technology and AI decisions.
+
+**Q: How can Devashish Jaiswal help my business?**
+
+A: Whether you want to build something new, bring in AI, check if your tech team is on track, or find out if your MVP is worth the investment, Devashish gives you clear, honest, expert guidance, and can lead the build when you need it.
+
+**Q: I am not technical. Can you still help me?**
+
+A: Absolutely. Most of the founders and business owners I work with are not engineers. I translate technology and AI into plain language and decisions you can actually act on.
+
+**Q: Can AI really help my offline or traditional business?**
+
+A: Often yes, but only in specific places. I help you cut through the hype and find where AI genuinely saves time or makes money for your business, then plan a realistic rollout.
+
+**Q: How do I know if my tech team or agency is doing a good job?**
+
+A: I run an independent health check on your team, your code, and your roadmap, then give you a straight answer with a clear action plan, no jargon.
+
+**Q: Is my idea or MVP worth building?**
+
+A: Before you spend real money, I give you an honest read on scope, cost, timeline, and risks, and tell you what to build first, or whether to build at all.
+
+## Pages
+
+- [Home](https://devashishjaiswal.com): Overview, who Devashish is, services, case studies, FAQ.
+- [About](https://devashishjaiswal.com/about): Full biography, track record, philosophy, and skills.
+- [Services](https://devashishjaiswal.com/services): Everything Devashish offers and how a project runs.
+- [Case Studies](https://devashishjaiswal.com/case-studies): Glimpass (acquired), markAIble (voice AI), Neurolaw AI (legal tech).
+- [Blog](https://devashishjaiswal.com/blog): Essays on building, scaling, AI, and leading teams.
+- [Contact](https://devashishjaiswal.com/contact): Email, book a 1:1 call, LinkedIn.
+- [Selected work](https://work.devashishjaiswal.com): Portfolio of projects.
+
+## Blog articles
+
+- [Turn Your Business Into a Live AI Dashboard](https://devashishjaiswal.com/blog/business-ai-dashboard) (2025-10-01): How to turn the systems you already run on into one live AI dashboard that explains, in plain English, what is actually happening in your business right now.
+- [From Idea to Impact: How a Clear 'Why' Defines Your Product](https://devashishjaiswal.com/blog/idea-to-impact-clear-why) (2025-07-22): A compelling why is not a branding exercise. It is the decision-making engine behind every technical and product choice you make. Here is how to find yours and use it.
+- [The Lean Startup's Guide to Building an AI-Powered MVP](https://devashishjaiswal.com/blog/ai-powered-mvp-lean) (2025-05-06): Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before you ever train a custom model, and keep costs sane.
+- [Your First Tech Hire: Lessons from a Startup CTO](https://devashishjaiswal.com/blog/your-first-tech-hire) (2025-02-11): A Fractional CTO on making your first engineering hire: who to look for, how to interview, how to onboard, and the expensive mistakes founders make.
+
+## Optional
+
+- [Sitemap](https://devashishjaiswal.com/sitemap.xml)
+- [Full content for LLMs](https://devashishjaiswal.com/llms-full.txt)

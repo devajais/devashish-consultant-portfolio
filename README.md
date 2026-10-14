@@ -32,11 +32,20 @@ npm run preview    # serve the built site
 Add a blog post by appending to `blogArticles` — its route, sitemap entry, and SEO
 tags are generated automatically.
 
-## SEO
+## SEO & LLM discoverability
 
-- Per-page `<title>`, meta description, canonical, OpenGraph & Twitter tags (`src/components/Seo.tsx`)
-- JSON-LD: `Person`, `BlogPosting`, `Blog`, `Service`
-- `sitemap.xml` (auto-generated), `robots.txt`, branded `og.png`, `404.html`
+- Per-page `<title>`, meta description, keywords, author, robots, canonical, OpenGraph & Twitter tags (`src/components/Seo.tsx`)
+- JSON-LD with a shared `@id` graph: `Person` (rich: occupations, knowsAbout, offers), `WebSite`,
+  `ProfilePage` (About), `Service` ×5 + `FAQPage` (Services), `Blog` / `BlogPosting`, `ItemList`
+  (Case Studies), `ContactPage`, and `BreadcrumbList` on every subpage
+- `llms.txt` (concise index, per [llmstxt.org](https://llmstxt.org)) and `llms-full.txt` (every
+  word on the site as Markdown), both generated at build time by `scripts/gen-llms.mjs` from the
+  same data the pages render from. Linked from `<link rel="alternate">` in every head and the footer.
+- `robots.txt` explicitly allows Google, Bing and the major AI crawlers (GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended, …) and points at the sitemap
+- `sitemap.xml` (auto-generated), branded `og.png`, `404.html` (noindex)
+
+Regenerate the derived files without a full build with `npm run generate`.
 
 ## Deploy
 

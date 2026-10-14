@@ -1,18 +1,45 @@
-import Seo from '@/components/Seo';
+import Seo, { breadcrumbJsonLd, PERSON_ID } from '@/components/Seo';
 import { Container, PageHero } from '@/components/Section';
 import Reveal from '@/components/reactbits/Reveal';
 import { CaseStudyCard } from '@/components/cards';
 import SelectedWork from '@/components/sections/SelectedWork';
 import CtaBanner from '@/components/sections/CtaBanner';
 import { caseStudies } from '@/data/site-data';
+import { site } from '@/site';
 
 export default function CaseStudies() {
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      '@id': `${site.url}/case-studies#list`,
+      name: `Case studies by ${site.name}`,
+      itemListElement: caseStudies.map((c, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        item: {
+          '@type': 'CreativeWork',
+          '@id': `${site.url}/case-studies#${c.slug}`,
+          name: c.title,
+          alternativeHeadline: c.subtitle,
+          description: `${c.challenge} ${c.outcome}`,
+          keywords: c.stack.join(', '),
+          author: { '@id': PERSON_ID },
+          contributor: { '@type': 'Role', roleName: c.role, contributor: { '@id': PERSON_ID } },
+        },
+      })),
+    },
+    breadcrumbJsonLd([{ name: 'Case Studies', path: '/case-studies' }]),
+  ];
+
   return (
     <>
       <Seo
         title="Case Studies"
         path="/case-studies"
         description="Real outcomes from Devashish Jaiswal: an acquired startup, a real-time voice AI platform, and a legal-tech product built from the ground up."
+        keywords={caseStudies.flatMap((c) => [c.title, ...c.stack])}
+        jsonLd={jsonLd}
       />
 
       <PageHero

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Seo, { personJsonLd } from '@/components/Seo';
+import Seo, { personJsonLd, breadcrumbJsonLd } from '@/components/Seo';
 import { Container, PageHero } from '@/components/Section';
 import Reveal from '@/components/reactbits/Reveal';
 import { site } from '@/site';
@@ -55,7 +55,18 @@ export default function Contact() {
         title="Contact"
         path="/contact"
         description="Get in touch with Devashish Jaiswal, Fractional CTO & AI Architect. Start a project, book a 1:1 call, or just say hello."
-        jsonLd={personJsonLd}
+        keywords={['contact Devashish Jaiswal', 'hire a Fractional CTO', 'book a call with Devashish Jaiswal']}
+        jsonLd={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            '@id': `${site.url}/contact#page`,
+            url: `${site.url}/contact`,
+            name: `Contact ${site.name}`,
+            mainEntity: { ...personJsonLd, '@context': undefined },
+          },
+          breadcrumbJsonLd([{ name: 'Contact', path: '/contact' }]),
+        ]}
       />
 
       <PageHero

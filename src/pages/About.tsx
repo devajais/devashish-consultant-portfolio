@@ -1,4 +1,4 @@
-import Seo, { personJsonLd } from '@/components/Seo';
+import Seo, { personJsonLd, profilePageJsonLd, breadcrumbJsonLd } from '@/components/Seo';
 import { Container, PageHero, SectionHeading } from '@/components/Section';
 import Reveal from '@/components/reactbits/Reveal';
 import CountUp from '@/components/reactbits/CountUp';
@@ -14,7 +14,9 @@ export default function About() {
         title="About"
         path="/about"
         description="Who is Devashish Jaiswal? A Fractional CTO and AI architect who has co-founded startups, led teams, scaled voice AI, and exited, and now helps founders and business owners make confident tech and AI decisions."
-        jsonLd={personJsonLd}
+        type="profile"
+        keywords={['about Devashish Jaiswal', 'who is Devashish Jaiswal', 'Devashish Jaiswal bio']}
+        jsonLd={[profilePageJsonLd, personJsonLd, breadcrumbJsonLd([{ name: 'About', path: '/about' }])]}
       />
 
       <PageHero

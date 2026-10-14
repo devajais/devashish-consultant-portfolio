@@ -2,6 +2,8 @@
 
 export const site = {
   name: 'Devashish Jaiswal',
+  givenName: 'Devashish',
+  familyName: 'Jaiswal',
   role: 'Fractional CTO & AI Architect',
   url: 'https://devashishjaiswal.com',
   email: 'contact@devashishjaiswal.com',
@@ -15,6 +17,21 @@ export const site = {
   location: 'India · Working globally',
   ogImage: 'https://devashishjaiswal.com/og.png',
   profileImage: '/devashish.png',
+  // Site-wide keywords; pages can append their own via <Seo keywords={[...]} />.
+  keywords: [
+    'Devashish Jaiswal',
+    'Fractional CTO',
+    'AI Architect',
+    'AI consultant for startups',
+    'AI strategy for business',
+    'AI business dashboards',
+    'MVP validation',
+    'tech team health check',
+    'startup technology advisor',
+    'CTO for hire',
+    'voice AI',
+    'LLM products',
+  ],
   links: {
     work: 'https://work.devashishjaiswal.com',
     linkedin: 'https://www.linkedin.com/in/devajais/',

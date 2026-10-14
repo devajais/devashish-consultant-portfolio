@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom';
-import Seo from '@/components/Seo';
+import Seo, { breadcrumbJsonLd, PERSON_ID } from '@/components/Seo';
 import { Container } from '@/components/Section';
 import { Aurora } from '@/components/three/HeroScene';
 import ArticleRenderer from '@/components/ArticleRenderer';
@@ -18,19 +18,39 @@ export default function BlogPost() {
 
   const related = blogArticles.filter((a) => a.slug !== post.slug).slice(0, 2);
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    dateModified: post.date,
-    keywords: post.tags.join(', '),
-    author: { '@type': 'Person', name: site.name, url: site.url },
-    publisher: { '@type': 'Person', name: site.name },
-    mainEntityOfPage: `${site.url}/blog/${post.slug}`,
-    image: site.ogImage,
-  };
+  const postUrl = `${site.url}/blog/${post.slug}`;
+  const wordCount = post.body.reduce((n, block) => {
+    const text =
+      'text' in block ? block.text : 'items' in block ? block.items.join(' ') : 'code' in block ? block.code : '';
+    return n + text.split(/\s+/).filter(Boolean).length;
+  }, 0);
+
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': `${postUrl}#article`,
+      headline: post.title,
+      description: post.description,
+      abstract: post.excerpt,
+      datePublished: post.date,
+      dateModified: post.date,
+      keywords: post.tags.join(', '),
+      articleSection: post.tags[0],
+      wordCount,
+      inLanguage: 'en',
+      author: { '@id': PERSON_ID },
+      publisher: { '@id': PERSON_ID },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': postUrl },
+      url: postUrl,
+      image: site.ogImage,
+      isAccessibleForFree: true,
+    },
+    breadcrumbJsonLd([
+      { name: 'Blog', path: '/blog' },
+      { name: post.title, path: `/blog/${post.slug}` },
+    ]),
+  ];
 
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     month: 'long',
@@ -46,6 +66,7 @@ export default function BlogPost() {
         description={post.description}
         type="article"
         publishedTime={post.date}
+        keywords={post.tags}
         jsonLd={jsonLd}
       />
 

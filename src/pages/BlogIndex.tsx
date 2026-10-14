@@ -1,4 +1,4 @@
-import Seo from '@/components/Seo';
+import Seo, { breadcrumbJsonLd, PERSON_ID } from '@/components/Seo';
 import { Container, PageHero } from '@/components/Section';
 import Reveal from '@/components/reactbits/Reveal';
 import { BlogCard } from '@/components/cards';
@@ -9,19 +9,29 @@ import { site } from '@/site';
 const posts = [...blogArticles].sort((a, b) => +new Date(b.date) - +new Date(a.date));
 
 export default function BlogIndex() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: `${site.name} Â· Writing`,
-    url: `${site.url}/blog`,
-    author: { '@type': 'Person', name: site.name },
-    blogPost: posts.map((p) => ({
-      '@type': 'BlogPosting',
-      headline: p.title,
-      datePublished: p.date,
-      url: `${site.url}/blog/${p.slug}`,
-    })),
-  };
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      '@id': `${site.url}/blog#blog`,
+      name: `${site.name} · Writing`,
+      url: `${site.url}/blog`,
+      inLanguage: 'en',
+      author: { '@id': PERSON_ID },
+      publisher: { '@id': PERSON_ID },
+      blogPost: posts.map((p) => ({
+        '@type': 'BlogPosting',
+        '@id': `${site.url}/blog/${p.slug}#article`,
+        headline: p.title,
+        description: p.description,
+        datePublished: p.date,
+        keywords: p.tags.join(', '),
+        url: `${site.url}/blog/${p.slug}`,
+        author: { '@id': PERSON_ID },
+      })),
+    },
+    breadcrumbJsonLd([{ name: 'Blog', path: '/blog' }]),
+  ];
 
   return (
     <>
@@ -29,6 +39,7 @@ export default function BlogIndex() {
         title="Blog"
         path="/blog"
         description="Essays on building, scaling, and leading, from making your first tech hire to shipping AI products and turning a running business into a live AI dashboard."
+        keywords={[...new Set(posts.flatMap((p) => p.tags))]}
         jsonLd={jsonLd}
       />
 

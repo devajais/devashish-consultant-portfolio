@@ -1,4 +1,4 @@
-import Seo, { faqJsonLd } from '@/components/Seo';
+import Seo, { faqJsonLd, breadcrumbJsonLd, PERSON_ID } from '@/components/Seo';
 import { Container, PageHero, SectionHeading } from '@/components/Section';
 import Reveal from '@/components/reactbits/Reveal';
 import { ServiceCard } from '@/components/cards';
@@ -9,15 +9,27 @@ import { services, launchJourney, faqs } from '@/data/site-data';
 import { site } from '@/site';
 
 export default function Services() {
-  const serviceJsonLd = {
+  const serviceJsonLd = services.map((s) => ({
     '@context': 'https://schema.org',
     '@type': 'Service',
-    provider: { '@type': 'Person', name: site.name, url: site.url },
-    serviceType: services.map((s) => s.title),
+    '@id': `${site.url}/services#${s.id}`,
+    name: s.title,
+    serviceType: s.title,
+    description: s.description,
+    provider: { '@id': PERSON_ID },
     areaServed: 'Worldwide',
-    description: site.description,
-  };
-  const jsonLd = [serviceJsonLd, faqJsonLd(faqs)];
+    availableChannel: { '@type': 'ServiceChannel', serviceUrl: `${site.url}/contact` },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: s.title,
+      itemListElement: s.details.map((d) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: d } })),
+    },
+  }));
+  const jsonLd = [
+    ...serviceJsonLd,
+    faqJsonLd(faqs),
+    breadcrumbJsonLd([{ name: 'Services', path: '/services' }]),
+  ];
 
   return (
     <>
@@ -25,6 +37,7 @@ export default function Services() {
         title="Services"
         path="/services"
         description="AI strategy, MVP validation, tech team health checks, and Fractional CTO help for founders and business owners, technical or not. Honest, hands-on, no hype."
+        keywords={services.map((s) => s.title)}
         jsonLd={jsonLd}
       />
 

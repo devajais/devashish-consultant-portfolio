@@ -148,7 +148,7 @@ export const blogArticles: BlogArticle[] = [
     slug: 'ai-powered-mvp-lean',
     title: "The Lean Startup's Guide to Building an AI-Powered MVP",
     description:
-      'Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before you ever train a custom model, and keep costs sane.',
+      'Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before training a custom model, and keep costs sane.',
     excerpt:
       'You do not need to train a model to launch an AI product. Here is how I help founders ship a validated AI MVP on API calls, not GPU bills.',
     date: '2025-05-06',
@@ -270,7 +270,7 @@ export const blogArticles: BlogArticle[] = [
     slug: 'idea-to-impact-clear-why',
     title: "From Idea to Impact: How a Clear 'Why' Defines Your Product",
     description:
-      'A compelling why is not a branding exercise. It is the decision-making engine behind every technical and product choice you make. Here is how to find yours and use it.',
+      'A compelling why is not a branding exercise. It is the decision engine behind every technical and product choice you make. Here is how to find yours.',
     excerpt:
       "Every technical tradeoff, every feature cut, every architecture decision traces back to your why. When it is fuzzy, the whole product drifts.",
     date: '2025-07-22',

@@ -11,9 +11,9 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About"
+        absoluteTitle="About Devashish Jaiswal · Fractional CTO & AI Architect"
         path="/about"
-        description="Who is Devashish Jaiswal? A Fractional CTO and AI architect who has co-founded startups, led teams, scaled voice AI, and exited, and now helps founders and business owners make confident tech and AI decisions."
+        description="Who is Devashish Jaiswal? Fractional CTO & AI Architect: co-founded startups, led a 12-person team, built real-time voice AI, exited via acquisition."
         type="profile"
         keywords={['about Devashish Jaiswal', 'who is Devashish Jaiswal', 'Devashish Jaiswal bio']}
         jsonLd={[profilePageJsonLd, personJsonLd, breadcrumbJsonLd([{ name: 'About', path: '/about' }])]}

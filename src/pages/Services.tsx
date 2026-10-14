@@ -34,9 +34,9 @@ export default function Services() {
   return (
     <>
       <Seo
-        title="Services"
+        absoluteTitle="Fractional CTO & AI Consulting Services · Devashish Jaiswal"
         path="/services"
-        description="AI strategy, MVP validation, tech team health checks, and Fractional CTO help for founders and business owners, technical or not. Honest, hands-on, no hype."
+        description="Fractional CTO and AI consulting by Devashish Jaiswal: AI strategy, AI business dashboards, MVP validation, and tech team health checks for founders."
         keywords={services.map((s) => s.title)}
         jsonLd={jsonLd}
       />

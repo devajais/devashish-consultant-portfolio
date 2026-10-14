@@ -88,8 +88,8 @@ A: Before you spend real money, I give you an honest read on scope, cost, timeli
 ## Blog articles
 
 - [Turn Your Business Into a Live AI Dashboard](https://devashishjaiswal.com/blog/business-ai-dashboard) (2025-10-01): How to turn the systems you already run on into one live AI dashboard that explains, in plain English, what is actually happening in your business right now.
-- [From Idea to Impact: How a Clear 'Why' Defines Your Product](https://devashishjaiswal.com/blog/idea-to-impact-clear-why) (2025-07-22): A compelling why is not a branding exercise. It is the decision-making engine behind every technical and product choice you make. Here is how to find yours and use it.
-- [The Lean Startup's Guide to Building an AI-Powered MVP](https://devashishjaiswal.com/blog/ai-powered-mvp-lean) (2025-05-06): Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before you ever train a custom model, and keep costs sane.
+- [From Idea to Impact: How a Clear 'Why' Defines Your Product](https://devashishjaiswal.com/blog/idea-to-impact-clear-why) (2025-07-22): A compelling why is not a branding exercise. It is the decision engine behind every technical and product choice you make. Here is how to find yours.
+- [The Lean Startup's Guide to Building an AI-Powered MVP](https://devashishjaiswal.com/blog/ai-powered-mvp-lean) (2025-05-06): Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before training a custom model, and keep costs sane.
 - [Your First Tech Hire: Lessons from a Startup CTO](https://devashishjaiswal.com/blog/your-first-tech-hire) (2025-02-11): A Fractional CTO on making your first engineering hire: who to look for, how to interview, how to onboard, and the expensive mistakes founders make.
 
 ## Optional

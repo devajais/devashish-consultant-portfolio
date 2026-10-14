@@ -35,9 +35,9 @@ export default function CaseStudies() {
   return (
     <>
       <Seo
-        title="Case Studies"
+        absoluteTitle="Case Studies · Devashish Jaiswal, Fractional CTO & AI Architect"
         path="/case-studies"
-        description="Real outcomes from Devashish Jaiswal: an acquired startup, a real-time voice AI platform, and a legal-tech product built from the ground up."
+        description="Case studies by Devashish Jaiswal, Fractional CTO: Glimpass (acquired), markAIble real-time voice AI, and Neurolaw AI legal tech built with a team of 12."
         keywords={caseStudies.flatMap((c) => [c.title, ...c.stack])}
         jsonLd={jsonLd}
       />

@@ -2,7 +2,10 @@ import { Head } from 'vite-react-ssg';
 import { site } from '@/site';
 
 interface SeoProps {
+  /** Page title; rendered as "<title> · Devashish Jaiswal". */
   title?: string;
+  /** Full <title> used verbatim, for pages that need the name positioned differently. */
+  absoluteTitle?: string;
   description?: string;
   path?: string;
   image?: string;
@@ -19,7 +22,8 @@ interface SeoProps {
 
 export default function Seo({
   title,
-  description = site.description,
+  absoluteTitle,
+  description = site.metaDescription,
   path = '/',
   image = site.ogImage,
   type = 'website',
@@ -29,7 +33,7 @@ export default function Seo({
   keywords = [],
   noIndex = false,
 }: SeoProps) {
-  const fullTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.role}`;
+  const fullTitle = absoluteTitle ?? (title ? `${title} · ${site.name}` : `${site.name} · ${site.role}`);
   const canonical = `${site.url}${path === '/' ? '' : path}`;
   const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   const allKeywords = [...new Set([...site.keywords, ...keywords])].join(', ');

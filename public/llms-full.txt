@@ -272,7 +272,7 @@ You already have the data. You already have the business. What is usually missin
 - **Reading time:** 7 min read
 - **Tags:** Product, Strategy, Founders, Startups
 
-*A compelling why is not a branding exercise. It is the decision-making engine behind every technical and product choice you make. Here is how to find yours and use it.*
+*A compelling why is not a branding exercise. It is the decision engine behind every technical and product choice you make. Here is how to find yours.*
 
 Founders come to me with a feature list. Rarely do they come with a why. And almost every hard decision we then have to make, what to build first, what to cut, which architecture to bet on, comes back to that missing why. A clear why is not a poster on the wall or a line in your pitch deck. It is the tool you use to make a thousand small decisions without having to relitigate your strategy every time.
 
@@ -335,7 +335,7 @@ Your why is the most practical asset you own. It is not marketing. It is the thi
 - **Reading time:** 9 min read
 - **Tags:** AI, MVP, Lean Startup, LLMs, Product
 
-*Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before you ever train a custom model, and keep costs sane.*
+*Build an AI MVP cheaply using pre-trained APIs like OpenAI, Anthropic, and Hugging Face. Validate demand before training a custom model, and keep costs sane.*
 
 The most expensive mistake I see in AI startups is founders deciding they need to train their own model before they have proven a single person wants what they are building. They read that a frontier model cost hundreds of millions to train and assume that is the price of entry. It is not. In 2025 you can put a genuinely useful AI product in front of real users in a couple of weeks, for the price of a few dinners, using models that other people have already paid to train.
 

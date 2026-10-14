@@ -52,9 +52,9 @@ export default function Contact() {
   return (
     <>
       <Seo
-        title="Contact"
+        absoluteTitle="Contact Devashish Jaiswal · Fractional CTO & AI Architect"
         path="/contact"
-        description="Get in touch with Devashish Jaiswal, Fractional CTO & AI Architect. Start a project, book a 1:1 call, or just say hello."
+        description="Contact Devashish Jaiswal, Fractional CTO & AI Architect. Email, book a 1:1 call on Topmate, or connect on LinkedIn to start a project or get a straight answer."
         keywords={['contact Devashish Jaiswal', 'hire a Fractional CTO', 'book a call with Devashish Jaiswal']}
         jsonLd={[
           {

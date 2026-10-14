@@ -36,9 +36,9 @@ export default function BlogIndex() {
   return (
     <>
       <Seo
-        title="Blog"
+        absoluteTitle="Blog · Devashish Jaiswal on AI, Startups & Engineering Leadership"
         path="/blog"
-        description="Essays on building, scaling, and leading, from making your first tech hire to shipping AI products and turning a running business into a live AI dashboard."
+        description="Articles by Devashish Jaiswal, Fractional CTO & AI Architect, on hiring your first engineer, building AI MVPs, AI business dashboards, and leading teams."
         keywords={[...new Set(posts.flatMap((p) => p.tags))]}
         jsonLd={jsonLd}
       />

@@ -63,7 +63,11 @@ export default function BlogPost() {
       <Seo
         title={post.title}
         path={`/blog/${post.slug}`}
-        description={post.description}
+        description={
+          post.description.length <= 118
+            ? `${post.description} By Devashish Jaiswal, Fractional CTO.`
+            : post.description
+        }
         type="article"
         publishedTime={post.date}
         keywords={post.tags}

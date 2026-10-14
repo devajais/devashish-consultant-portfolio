@@ -65,15 +65,15 @@ export default function Hero() {
           className="max-w-3xl"
           style={reduce ? undefined : { y: contentY, opacity: contentOpacity }}
         >
-          <motion.p {...rise(0.05)} className="eyebrow mb-6 flex items-center gap-3">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            {site.name} · {site.role}
-          </motion.p>
-
           <h1 className="font-display text-[clamp(2.35rem,7.5vw,5.25rem)] font-semibold leading-[1.02] tracking-tight sm:leading-[0.98]">
+            {/* Name + role lead the H1 (visible, styled as the eyebrow) so the page's main heading names the person. */}
+            <motion.span {...rise(0.05)} className="eyebrow mb-6 flex items-center gap-3 font-normal leading-normal">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
+              </span>
+              {site.name} · {site.role}
+            </motion.span>{' '}
             <span className="block overflow-hidden pb-[0.06em]">
               <motion.span {...line(0.12)} className="block">
                 The technical{' '}
